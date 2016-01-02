@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: 'Courier', 'Courier New', monospace;
+    font-size: 16pt;
+}
+
+h1, p, li {
+    margin: 1em 0;
+}
+
+p, li {
+    line-height: 1.25em;
+}
+
+ul, ol, dl {
+    margin-left: 1em;
+}
+
+main {
+    margin: 2em 0;
+}
+
+.main-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-header {
+    margin: 1em 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.main-header h1, .main-header p, .main-footer p {
+    margin: 0.5em 0;
+}
+
+.main-footer {
+    border-top: 1px solid #ccc;
+}
