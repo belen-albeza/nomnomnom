@@ -1,6 +1,7 @@
 ---
 title: Home
 permalink: false
+layout: home.jade
 ---
 
 Welcome to my **cookbook**. I'm learning how to cook, and I've decided to compile the recipes I find easier and quicker.

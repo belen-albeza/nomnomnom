@@ -7,7 +7,7 @@ body {
     background: #fff;
     color: #000;
     font-family: 'Courier', 'Courier New', monospace;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 a {
@@ -30,6 +30,10 @@ p, li {
 
 ul, ol, dl {
     margin-left: 1em;
+}
+
+ol {
+    padding-left: 1em;
 }
 
 main {
@@ -73,8 +77,34 @@ main {
 
 .main-footer {
     text-align: center;
+    margin-bottom: 2em;
 }
 
 .language {
     font-style: italic;
+}
+
+.content > h1 {
+    font-size: 38px;
+    text-align: center;
+}
+
+@media (min-device-width: 500px) {
+    .content ul {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        list-style-position: inside;
+        margin: 1.25em 0;
+    }
+
+    .content ul > li:first-child {
+        margin-top: 0;
+    }
+}
+
+.content img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
 }

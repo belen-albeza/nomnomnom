@@ -9,17 +9,20 @@ head
 body
     div.main-wrapper
         header.main-header
-            h1= __('Ñam ñam ñam')
+            h1: a(href='/' + (locale == defaultLocale ? '' : locale + '/'))= __('Ñam ñam ñam')
             p.tagline= __('Easy recipes')
 
         main
-            p.language= __('Also available in')
-                | #{' '}
-                - each lc in locales.filter(function (x) {return x !== locale; })
-                    a(href='/' + lang(lc).path)= __(lc)
-                | .
+            article.content
+                h1= title
+                p.language= __('Also available in')
+                    | #{' '}
+                    - each lc in locales.filter(function (x) {return x !== locale; })
+                        a(href='/' + lang(lc).path)= __(lc)
+                    | .
+                != contents
 
-            != contents
+                block extra
 
         footer.main-footer
             p #{__('Compiled with ♥︎ by')} <a href="https://www.twitter.com/ladybenko">@ladybenko</a>.
