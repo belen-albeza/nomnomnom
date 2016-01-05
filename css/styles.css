@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: 'Courier', 'Courier New', monospace;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    box-shadow: inset 0 -3px #31ffd5;
+}
+
+a:hover, a:active {
+    background: #31ffd5;
+}
+
+h1, p, li {
+    margin: 1em 0;
+}
+
+p, li {
+    line-height: 1.25em;
+}
+
+ul, ol, dl {
+    margin-left: 1em;
+}
+
+ol {
+    padding-left: 1em;
+}
+
+main {
+    margin: 2em 0;
+}
+
+.main-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.main-header {
+    margin: 1em 0;
+    text-align: center;
+}
+
+.main-header h1, .main-header p, .main-footer p {
+    margin: 0.25em 0;
+}
+
+.main-header:after, .main-footer:before {
+    content: "...";
+    font-size: 2em;
+    color: #ccc;
+    display: block;
+    text-align: center;
+}
+
+.main-header:after {
+    margin-top: 0;
+}
+
+.main-footer:before {
+    margin-bottom: 0.5em;
+}
+
+.tagline {
+    font-size: 20px;
+}
+
+.main-footer {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.language {
+    font-style: italic;
+}
+
+.content > h1 {
+    font-size: 38px;
+    text-align: center;
+}
+
+@media (min-device-width: 500px) {
+    .content ul {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        list-style-position: inside;
+        margin: 1.25em 0;
+    }
+
+    .content ul > li:first-child {
+        margin-top: 0;
+    }
+}
+
+.content img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+}
