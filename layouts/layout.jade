@@ -3,21 +3,23 @@ doctype html
 head
     title Ñam ñam ñam
     meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/css/styles.css')
 
 body
     div.main-wrapper
         header.main-header
-            h1 Ñam ñam ñam
-            p.tagline Libro de recetas de @ladybenko
+            h1= __('Ñam ñam ñam')
+            p.tagline= __('Easy recipes')
 
         main
-            - if (langs)
-                p.meta Available in#{' '}
-                    - each slug, lang in langs
-                        a(href='/' + lang + '/' + slug + '.html')= lang
+            p.language= __('Also available in')
+                | #{' '}
+                - each lc in locales.filter(function (x) {return x !== locale; })
+                    a(href='/' + lang(lc).path)= __(lc)
+                | .
 
             != contents
 
         footer.main-footer
-            p Crafted with ♥︎ by <a href="https://www.twitter.com/ladybenko">@ladybenko</a>
+            p #{__('Compiled with ♥︎ by')} <a href="https://www.twitter.com/ladybenko">@ladybenko</a>.
