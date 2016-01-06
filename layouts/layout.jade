@@ -9,17 +9,21 @@ head
 body
     div.main-wrapper
         header.main-header
-            h1: a(href='/' + (locale == defaultLocale ? '' : locale + '/'))= __('Ñam ñam ñam')
+            - var indexUrl = locale === defaultLocale ? '/' : `/${locale}/`;
+            h1: a(href=indexUrl)= __('Ñam ñam ñam')
             p.tagline= __('Easy recipes')
 
         main
             article.content
                 h1= title
-                p.language= __('Also available in')
-                    | #{' '}
-                    - each lc in locales.filter(function (x) {return x !== locale; })
-                        a(href='/' + lang(lc).path)= __(lc)
-                    | .
+                - var availableLocales = locales.filter(x => x !== locale && !!lang(x));
+                if availableLocales
+                    p.translations #{__('Also available in') + ' '}
+                        each lc, index in availableLocales
+                            a(href=`/${lang(lc).path}`)= __(lc)
+                            if index < availableLocales.length - 1
+                                |,#{' '}
+                        |.
                 != contents
 
                 block extra

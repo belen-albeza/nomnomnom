@@ -108,3 +108,7 @@ main {
     display: block;
     max-width: 100%;
 }
+
+.translations {
+    font-style: italic;
+}

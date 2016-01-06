@@ -24,11 +24,11 @@ const LOCALES = ['en', 'es'];
 let metal = metalsmith(__dirname)
     .source(path.join('src', 'content'))
     .use(collections({
-        englishRecipes: {
+        'recipes_en': {
             pattern: 'recipes/*_en.md',
             sortBy: 'title'
         },
-        spanishRecipes: {
+        'recipes_es': {
             pattern: 'recipes/*_es.md',
             sortBy: 'title'
         }
@@ -47,10 +47,10 @@ let metal = metalsmith(__dirname)
         relative: false,
         pattern: '/:locale/:title/',
         linksets: [{
-            match: { collection: 'spanishRecipes'},
+            match: { collection: 'recipes_es'},
             pattern: ':locale/recetas/:title/'
         }, {
-            match: { collection: 'englishRecipes'},
+            match: { collection: 'recipes_en'},
             pattern: ':locale/recipes/:title/'
         }]
     }))
