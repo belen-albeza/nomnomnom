@@ -7,6 +7,8 @@ title: Guisado de pollo
 - Tupper? Sí
 - Congelador? No
 
+![Guisado de pollo](/images/recipes/guisado.png)
+
 Esta es una receta de mi madre. Sienta muy bien, sobre todo en invierno, y creo que es de las pocas cosas sanas que están realmente buenas.
 
 En principio deberías poder congelar el guisado si le quitas las patatas, pero claro, entonces pierde su gracia.

@@ -9,6 +9,8 @@ time: 40
 - Tupper? Yes
 - Freezer? No
 
+![Chicken stew](/images/recipes/guisado.png)
+
 This recipe is my mom's. This is totally comfort food, and it's healthy!
 
 In theory you should be able to freeze this if you remove the potatoes. Not worth it, in my opinion.

@@ -2,7 +2,7 @@
 title: Lentejas con chorizo
 ---
 
-- Dificultad: baja
+- Dificultad: fácil
 - Tiempo: 20-25 minutos
 - Tupper? Sí
 - Congelador? Sí
