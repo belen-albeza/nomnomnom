@@ -1,8 +1,8 @@
 extends ./layout.jade
 
 block extra
-    h2 Recipes
+    h2= __('Recipes')
 
     ul
     - each recipe in spanishRecipes
-        li: a(href=recipe.lang(locale).path)= recipe.lang(locale).title
+        li: a(href='/' + recipe.lang(locale).path)= recipe.lang(locale).title

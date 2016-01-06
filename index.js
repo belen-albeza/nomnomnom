@@ -45,13 +45,13 @@ let metal = metalsmith(__dirname)
     .use(markdown())
     .use(permalinks({
         relative: false,
-        pattern: ':locale/:title',
+        pattern: '/:locale/:title/',
         linksets: [{
             match: { collection: 'spanishRecipes'},
-            pattern: ':locale/recetas/:title'
+            pattern: ':locale/recetas/:title/'
         }, {
             match: { collection: 'englishRecipes'},
-            pattern: ':locale/recipes/:title'
+            pattern: ':locale/recipes/:title/'
         }]
     }))
     .use(layouts({
